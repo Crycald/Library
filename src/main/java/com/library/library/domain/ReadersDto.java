@@ -7,11 +7,11 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class ReadersDto {
     private int id;
     private String firstname;
     private String lastname;
-    private final LocalDate createdAcc = LocalDate.now();
+    private LocalDate createdAcc;
 }

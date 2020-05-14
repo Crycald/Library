@@ -10,8 +10,9 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RentsDto {
+    private int rentId;
     private int readerId;
     private int bookId;
-    private final LocalDate rentDate = LocalDate.now();
+    private LocalDate rentDate;
     private LocalDate returnDate;
 }
