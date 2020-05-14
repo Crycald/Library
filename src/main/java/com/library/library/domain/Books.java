@@ -15,10 +15,10 @@ public class Books {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
-    private int id;
+    private BookSignature id;
 
     @Column(nullable = false, name = "TITLE")
-    private String title;
+    private BookSignature title;
 
     @Column(name = "STATUS")
     private BookStatus status;
