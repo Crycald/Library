@@ -21,10 +21,10 @@ public class Rents {
     private int rentId;
 
     @Column(nullable = false, name = "READER_ID")
-    private int readerId;
+    private Readers readerId;
 
     @Column(nullable = false, name = "BOOK_ID")
-    private int bookId;
+    private Books bookId;
 
     @Column(nullable = false, name = "RENT_DATE")
     private final LocalDate rentDate = LocalDate.now();
