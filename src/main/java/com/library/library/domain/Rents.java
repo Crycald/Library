@@ -18,7 +18,7 @@ public class Rents {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "RENT_ID")
-    private int rentId;
+    private Long rentId;
 
     @Column(nullable = false, name = "READER_ID")
     private Readers readerId;

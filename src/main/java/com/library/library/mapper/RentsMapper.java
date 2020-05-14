@@ -4,10 +4,12 @@ import com.library.library.domain.Books;
 import com.library.library.domain.Readers;
 import com.library.library.domain.Rents;
 import com.library.library.domain.RentsDto;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class RentsMapper {
     public Rents mapToRents(final RentsDto rentsDto, final Readers readers, final Books books) {
         return Rents.builder()
@@ -34,7 +36,7 @@ public class RentsMapper {
         );
     }
 
-    public List<RentsDto> mapToRentsDto(final List<Rents> rentsList) {
+    public List<RentsDto> mapToRentsDtoList(final List<Rents> rentsList) {
         return rentsList
                 .stream()
                 .map(this::mapToRentsDto)

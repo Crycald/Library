@@ -10,9 +10,9 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RentsDto {
-    private int rentId;
-    private int readerId;
-    private int bookId;
+    private Long rentId;
+    private Long readerId;
+    private Long bookId;
     private LocalDate rentDate;
     private LocalDate returnDate;
 }

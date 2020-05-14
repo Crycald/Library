@@ -12,8 +12,8 @@ import javax.persistence.Enumerated;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BooksDto {
-    private int id;
-    private int bookSignatureId;
+    private Long id;
+    private Long bookSignatureId;
     private String title;
 
     @Enumerated(EnumType.STRING)

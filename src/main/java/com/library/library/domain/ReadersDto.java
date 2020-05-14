@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ReadersDto {
-    private int id;
+    private Long id;
     private String firstname;
     private String lastname;
     private LocalDate createdAcc;

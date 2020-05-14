@@ -2,12 +2,14 @@ package com.library.library.mapper;
 
 import com.library.library.domain.BookSignature;
 import com.library.library.domain.BookSignatureDto;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class BookSignatureMapper {
-    public BookSignature mapToBookSignatureDto(final BookSignatureDto bookSignatureDto) {
+    public BookSignature mapToBookSignature(final BookSignatureDto bookSignatureDto) {
         return BookSignature.builder()
                 .id(bookSignatureDto.getId())
                 .title(bookSignatureDto.getTitle())
@@ -16,7 +18,7 @@ public class BookSignatureMapper {
                 .build();
     }
 
-    public BookSignatureDto mapToBookSignature(final BookSignature bookSignature) {
+    public BookSignatureDto mapToBookSignatureDto(final BookSignature bookSignature) {
         BookSignatureDto.builder()
                 .id(bookSignature.getId())
                 .build();
@@ -32,7 +34,7 @@ public class BookSignatureMapper {
     public List<BookSignatureDto> mapToBookSignatureDtoList(final List<BookSignature> bookSignatureList) {
         return bookSignatureList
                 .stream()
-                .map(this::mapToBookSignature)
+                .map(this::mapToBookSignatureDto)
                 .collect(Collectors.toList());
     }
 }

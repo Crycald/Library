@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookSignatureDto {
-    private int id;
+    private Long id;
     private String title;
     private String author;
     private LocalDate publicationDate;

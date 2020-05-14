@@ -2,10 +2,12 @@ package com.library.library.mapper;
 
 import com.library.library.domain.Readers;
 import com.library.library.domain.ReadersDto;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class ReadersMapper {
     public Readers mapToReaders(final ReadersDto readersDto) {
         return Readers.builder()
@@ -16,7 +18,7 @@ public class ReadersMapper {
                 .build();
     }
 
-    public ReadersDto mapToBooksDto(final Readers readers) {
+    public ReadersDto mapToReaderssDto(final Readers readers) {
         ReadersDto.builder()
                 .id(readers.getId())
                 .build();
@@ -32,7 +34,7 @@ public class ReadersMapper {
     public List<ReadersDto> mapToReadersDtoList(final List<Readers> readersList) {
         return readersList
                 .stream()
-                .map(this::mapToBooksDto)
+                .map(this::mapToReaderssDto)
                 .collect(Collectors.toList());
     }
 }
